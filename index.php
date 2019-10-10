@@ -5,19 +5,22 @@
   </head>
   <body>
     <?php
-      function func(&$var1, &$var2)
+      function func(&$var1, &$var2, $operation)
     {
       $res = $var2 / $var1;
       $var1 = $var2 * $var1;
       $var2 = $var2 + $var1;
       $var2 = $var2 - $var1;
-      return $res;
+      $operation = "/ * + -";
+          return $res;
     }
       $a = 5;
       $b = 10;
-      echo func($a, $b);
+      $operation = "/ * - +";
+      echo func($a, $b, $operation);
       echo $a;
-      echo $b
+      echo $b;
+      echo $operation;
     ?>
   </body>
 </html>
