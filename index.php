@@ -4,8 +4,7 @@
     <title>strelchuk php</title>
   </head>
   <body>
-<!--
-<?php
+    <?php
       function func(&$var1, &$var2, $operation)
     {
       switch ($operation) :
@@ -25,19 +24,18 @@
       echo func($a, $b, '-');
       echo $a;
       echo $b;
+      echo "<br>";
     ?>
--->
-  <?php
-    function stairs($x, $y) {
-    $max = $x . $y; 
-      for($i=1; $i<8; $i++)
-        
-        echo $i;
-      return $max;
-    }
-  echo stairs ($max, "\n");
-  
-  ?> 
+    <?php
+      function stairs($x, $y) {
+        $item;
+        for ($i = $x; $i <= $y; $i++) {
+          $item = $item . $i;
+          echo $item . '</br>';
+        }
+      }
+      stairs(1, 7);
+    ?> 
 
   </body>
 </html>
