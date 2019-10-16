@@ -29,12 +29,12 @@
     <?php
       function stairs($x, $y) {
         $item;
-        for ($i = $x; $i <= $y; $i++) {
+        for ($i = $x; $i < $y; $i++) {
           $item = $item . $i;
           echo $item . '</br>';
         }
       }
-      stairs(1, 7);
+      stairs(1, 8);
     ?> 
 
   </body>
