@@ -28,13 +28,14 @@
     ?>
     <?php
       function stairs($x, $y) {
-        $item;
-        for ($i = $x; $i < $y; $i++) {
-          $item = $item . $i;
+        $item = "";
+        $item1 = "#";
+        for ($i = $x; $i <= $y; $i++) {
+          $item = $item . $i . $item1;
           echo $item . '</br>';
         }
       }
-      stairs(1, 8);
+      stairs(1, 3);
     ?> 
 
   </body>
