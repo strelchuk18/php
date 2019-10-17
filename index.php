@@ -28,13 +28,20 @@
     ?>
     <?php
       function stairs($x, $y) {
+        $element = $x . $y;
+        if (is_numeric($element)) {
+         echo "Yes"; 
+        } 
+        else { 
+          echo "No"; 
+        }
         $item = "";
         $item1 = "#";
         for ($i = $x; $i <= $y; $i++) {
           $item = $item . $i . $item1;
           echo $item . '</br>';
         }
-      }
+      };
       stairs(1, 3);
     ?> 
 
