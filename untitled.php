@@ -59,3 +59,180 @@ else{
       }
       stairs(1, 3);
     ?> 
+
+    <?php
+      function stairs($x, $y) {
+        $element = $x . $y;
+        if (is_numeric($element)) {
+         echo "Yes"; 
+        } 
+        else { 
+          echo "No"; 
+        }
+        $item = "";
+        $item1 = "#";
+        for ($i = $x; $i <= $y; $i++) {
+          $item = $item . $i . $item1;
+          echo $item . '</br>';
+        }
+      }
+      stairs(1, 3);
+    ?> 
+
+
+    <?php
+      function stairs($x, $y) {
+        $element = $x . $y;
+
+        if(!is_string("^[А-Яа-я'-]+$", $element))
+        {
+                $ups .= "Введите имя только русскими буквами!<br>";
+        }
+        $item = "";
+        $item1 = "#";
+        for ($i = $x; $i <= $y; $i++) {
+          $item = $item . $i . $item1;
+          echo $item . '</br>';
+        }
+      }
+      stairs('оль', 3);
+    ?> 
+
+
+
+
+
+
+
+    <?php
+      function stairs($x, $y) 
+      {
+        if (is_numeric($x) && is_numeric($y))
+        {
+          $item = "";
+          $item1 = "#";
+          for ($i = $x; $i <= $y; $i++) 
+          {
+            $item = $item . $i . $item1;
+            echo $item . '</br>';
+          }
+        } 
+          else 
+          { 
+            echo "Add numeric for function"; 
+          }     
+      }
+      stairs(1, 3);
+    ?> 
+    <?php
+      function stairs1($x, $y) 
+      {
+        if (is_string($x) || is_string($y)) 
+        {
+          $item = "";
+          for ($i = $x; $i <= $y; $i++) 
+          {
+            $item = $item . $i;
+            echo $item . '</br>';
+          }
+        } 
+          else 
+          { 
+            echo "Add text for function"; 
+          }     
+      }
+      stairs1('ac', 'b');
+    ?> 
+    <?php
+      function filee($file) {
+        $file = ['text1.txt', 'order.txt', 'sample.txt', 'demo.txt'];
+        $file = fopen ('text1.txt', 'r'); 
+        while (!feof($file)) {
+          $line = fgets($file, 2);
+          $line++;
+        }
+        fclose($file);
+      }
+      filee($file);
+    ?>
+
+
+
+
+
+        <!--
+    <?php
+      function func(&$var1, &$var2, $operation)
+    {
+      switch ($operation) :
+        case "/": return $var1 / $var2; 
+        case "*": return $var1 * $var2;
+        case "+": return $var1 + $var2;
+        case "-": return $var1 - $var2;
+       endswitch;
+      $res = $var1 . $operation . $var2;
+        return $res;
+    }
+      $a = 5;
+      $b = 10;
+      echo func($a, $b, '/');
+      echo func($a, $b, '*');
+      echo func($a, $b, '+');
+      echo func($a, $b, '-');
+      echo $a;
+      echo $b;
+      echo "<br>";
+    
+      function stairs($x, $y) {
+        if (is_numeric($x) && is_numeric($y)) {
+          $item = '';
+          for ($i = $x; $i <= $y; $i++) {
+            $item = $item . $i . '#';
+            echo $item . '</br>';
+          }
+        }
+        else {
+          echo 'Please write numeric values in function';
+        }
+      }
+      stairs(1, 3);
+
+      function stairs1($x, $y) {
+        if (is_string($x) || is_string($y)) {
+          echo 'Please write numeric values in function';
+        } 
+        else {
+          $item = '';
+          for ($i = $x; $i <= $y; $i++) {
+            $item = $item . $i . '#';
+            echo $item . '</br>';
+          }
+        }
+      }
+      stairs1('1', 3);
+    ?>
+    -->
+
+
+
+
+    <?php
+      function filee($f) {
+        $files = ['text1.txt', 'order.txt', 'sample.txt', 'demo.txt'];
+        $file = fopen ('text1.txt', 'r');
+        $file1 = fopen ('order.txt', 'r');
+        $file2 = fopen ('sample.txt', 'r');
+        $file3 = fopen ('demo.txt', 'r');
+        $item = "";
+        while (!feof($files)) {
+          $item = $item . $files;
+           echo fgets($file, 16). "<br />";
+           echo fgets($file1, 16). "<br />";
+           echo fgets($file2, 16). "<br />";
+           echo fgets($file3, 16). "<br />";
+          
+        }
+        fclose($file);
+      }
+      filee($f);
+    ?>

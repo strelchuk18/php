@@ -25,45 +25,51 @@
       echo $a;
       echo $b;
       echo "<br>";
-    ?>
-    <?php
-      function stairs($x, $y) 
-      {
-        if (is_numeric($x) && is_numeric($y))
-        {
-          $item = "";
-          $item1 = "#";
-          for ($i = $x; $i <= $y; $i++) 
-          {
-            $item = $item . $i . $item1;
+    
+      function stairs($x, $y) {
+        if (is_numeric($x) && is_numeric($y)) {
+          $item = '';
+          for ($i = $x; $i <= $y; $i++) {
+            $item = $item . $i . '#';
             echo $item . '</br>';
           }
-        } 
-          else 
-          { 
-            echo "Add numeric for function"; 
-          }     
+        }
+        else {
+          echo 'Please write numeric values in function';
+        }
       }
       stairs(1, 3);
-    ?> 
-    <?php
-      function stairs1($x, $y) 
-      {
-        if (is_string($x) || is_string($y)) 
-        {
-          $item = "";
-          for ($i = $x; $i <= $y; $i++) 
-          {
-            $item = $item . $i;
+
+      function stairs1($x, $y) {
+        if (is_string($x) || is_string($y)) {
+          echo 'Please write numeric values in function';
+        } 
+        else {
+          $item = '';
+          for ($i = $x; $i <= $y; $i++) {
+            $item = $item . $i . '#';
             echo $item . '</br>';
           }
-        } 
-          else 
-          { 
-            echo "Add text for function"; 
-          }     
+        }
       }
-      stairs1('ac', 'b');
-    ?> 
+      stairs1('1', 3);
+    ?>
+    <?php
+      function filee($f) {
+        $files = ['text1.txt', 'order.txt', 'sample.txt', 'demo.txt'];
+        $file = fopen ('text1.txt', 'r');
+        $file1 = fopen ('order.txt', 'r');
+        $file2 = fopen ('sample.txt', 'r');
+        $file3 = fopen ('demo.txt', 'r');
+          if (!feof($files)) {
+            echo fgets($file, 15). "<br />";
+            echo fgets($file1, 15). "<br />";
+            echo fgets($file2, 12). "<br />";
+            echo fgets($file3, 14). "<br />";  
+          }
+          fclose($files);
+        }
+      filee($f);
+    ?>
   </body>
 </html>
