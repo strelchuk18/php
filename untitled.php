@@ -37,4 +37,25 @@
     {
         echo stairs ("\n", $i);
     } 
-  ?> 
+  ?>
+<?php
+      function stairs($x, $y) {
+        $element = $x . $y;
+  if(empty($element))
+{
+        $ups .= "";
+}
+else{
+        if(!is_srting("^[А-Яа-я' -]+$", $element))
+        {
+                $ups .= "Введите имя только русскими буквами!<br>";
+        }
+        $item = "";
+        $item1 = "#";
+        for ($i = $x; $i <= $y; $i++) {
+          $item = $item . $i . $item1;
+          echo $item . '</br>';
+        }
+      }
+      stairs(1, 3);
+    ?> 
