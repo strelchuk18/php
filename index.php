@@ -27,22 +27,43 @@
       echo "<br>";
     ?>
     <?php
-      function stairs($x, $y) {
-        $element = $x . $y;
-        if (is_numeric($element)) {
-         echo "Yes"; 
-        } 
-        else { 
-          echo "No"; 
-        }
-        $item = "";
-        $item1 = "#";
-        for ($i = $x; $i <= $y; $i++) {
-          $item = $item . $i . $item1;
-          echo $item . '</br>';
-        }
-      }
+      function stairs($x, $y) 
+    {
+      if (is_numeric($x) & is_numeric($y))
+    {
+      $item = "";
+      $item1 = "#";
+      for ($i = $x; $i <= $y; $i++) 
+    {
+      $item = $item . $i . $item1;
+        echo $item . '</br>';
+    }
+    } 
+      else 
+    { 
+      echo "Add numeric for function"; 
+    }     
+    }
       stairs(1, 3);
+    ?> 
+    <?php
+      function stairs1($x, $y) 
+    {
+      if (is_string($x) & is_string($y))
+    {
+      $item = "";
+      for ($i = $x; $i <= $y; $i++) 
+    {
+      $item = $item . $i;
+        echo $item . '</br>';
+    }
+    } 
+      else 
+    { 
+      echo "Add text for function"; 
+    }     
+    }
+      stairs1(1, 'hello');
     ?> 
   </body>
 </html>
