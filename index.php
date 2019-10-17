@@ -28,6 +28,7 @@
     ?>
     <?php
       function stairs($x, $y) {
+<<<<<<< HEAD
         $element = $x . $y;
         if (is_numeric($element)) {
          echo "Yes"; 
@@ -35,13 +36,19 @@
         else { 
           echo "No"; 
         }
+=======
+>>>>>>> 92f503ea3dc7c654045757a6dbc26ad262bf42ea
         $item = "";
         $item1 = "#";
         for ($i = $x; $i <= $y; $i++) {
           $item = $item . $i . $item1;
           echo $item . '</br>';
         }
+<<<<<<< HEAD
       };
+=======
+      }
+>>>>>>> 92f503ea3dc7c654045757a6dbc26ad262bf42ea
       stairs(1, 3);
     ?> 
 
