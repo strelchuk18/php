@@ -55,13 +55,10 @@
       stairs1('1', 3);
     
       function filee($f) {
-        $files = ['text1.txt', 'order.txt', 'sample.txt', 'demo.txt'];
-          foreach ($files as $value ) {
+        $files = ['text1.txt', 'order.txt', 'sample.txt', 'demo.txt', 'test.txt', 'test2.txt', 'test3.txt', 'test.txt'];
+          foreach ($files as $f ) {
+            echo file_get_contents ($f). "<br />";
           }
-            echo file_get_contents($files[0]). "<br />";
-            echo file_get_contents($files[1]). "<br />";
-            echo file_get_contents($files[2]). "<br />";
-            echo file_get_contents($files[3]). "<br />";
       }
       echo filee ($files);
     ?>
