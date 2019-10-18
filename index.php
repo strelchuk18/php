@@ -35,14 +35,14 @@
           }
         }
         else {
-          echo 'Please write numeric values in function';
+          echo 'Please write numeric values in function'. '</br>';
         }
       }
-      stairs(1, 3);
+      stairs(1, 5);
 
       function stairs1($x, $y) {
         if (is_string($x) || is_string($y)) {
-          echo 'Please write numeric values in function';
+          echo 'Please write numeric values in function'. '</br>';
         } 
         else {
           $item = '';
@@ -57,16 +57,14 @@
     <?php
       function filee($f) {
         $files = ['text1.txt', 'order.txt', 'sample.txt', 'demo.txt'];
-        $file = fopen ('text1.txt', 'r');
-        $file1 = fopen ('order.txt', 'r');
-        $file2 = fopen ('sample.txt', 'r');
-        $file3 = fopen ('demo.txt', 'r');
-          if (!feof($files)) {
-            echo fgets($file, 15). "<br />";
-            echo fgets($file1, 15). "<br />";
-            echo fgets($file2, 12). "<br />";
-            echo fgets($file3, 14). "<br />";  
+        $a = fopen ('text1.txt', 'r');
+        $b = fopen ('order.txt', 'r');
+        $c = fopen ('sample.txt', 'r');
+        $d = fopen ('demo.txt', 'r');
+          foreach ($files as $value ) {
+          
           }
+            
           fclose($files);
         }
       filee($f);
