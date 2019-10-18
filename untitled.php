@@ -272,3 +272,25 @@ else{
         }
       filee($f);
     ?>
+
+
+
+    
+    <?php
+    function team($one, $two) {
+      $first_team = ['Dmytro' => 5, 'Ivan' => 1,'Vova' => 6, 'Andriy' => 3,'Vasyl' => 2,'Petro' => 4,'Kindrat' => 7,'Oleksandr' => 1,'Oksana' => 3,'Olena' => 5,'Kyrylo' => 3];
+      $second_team = ['Stepan' => 5, 'Ivan' => 1,'Vova' => 6,'Serhii' => 3,'Vasyl' => 2,'Petro' => 4,'Oleksiy' => 7,'Iruna' => 1,'Oksana' => 3,'Olena' => 5,'Filip' => 3];
+     $A = $first_team;
+     $B = $second_team;
+        asort($A);
+        foreach($A as $k=>$v) {
+          echo "$k=>$v"."<br />";
+        }
+        echo "<br />";
+        asort($B);
+        foreach($B as $k=>$v) {
+          echo "$k=>$v" . "<br />";
+        }
+      }
+      team ($A, $B);
+    ?>

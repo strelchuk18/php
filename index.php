@@ -4,6 +4,7 @@
     <title>strelchuk php</title>
   </head>
   <body>
+
     <?php
       function func(&$var1, &$var2, $operation)
     {
@@ -53,14 +54,15 @@
         }
       }
       stairs1('1', 3);
-    
-      function filee($f) {
-        $files = ['text1.txt', 'order.txt', 'sample.txt', 'demo.txt', 'test.txt', 'test2.txt', 'test3.txt', 'test.txt'];
-          foreach ($files as $f ) {
-            echo file_get_contents ($f). "<br />";
-          }
+      
+      
+      function filee($files) {
+        foreach ($files as $file) {
+          echo file_get_contents ($file). "<br />";
+        }
       }
-      echo filee ($files);
+      $files = ['text1.txt', 'order.txt', 'sample.txt', 'demo.txt', 'test.txt', 'test2.txt', 'test3.txt', 'test.txt'];
+      filee($files);
     ?>
   </body>
 </html>
