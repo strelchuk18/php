@@ -53,21 +53,17 @@
         }
       }
       stairs1('1', 3);
-    ?>
-    <?php
+    
       function filee($f) {
         $files = ['text1.txt', 'order.txt', 'sample.txt', 'demo.txt'];
-        $a = fopen ('text1.txt', 'r');
-        $b = fopen ('order.txt', 'r');
-        $c = fopen ('sample.txt', 'r');
-        $d = fopen ('demo.txt', 'r');
           foreach ($files as $value ) {
-          
           }
-            
-          fclose($files);
-        }
-      filee($f);
+            echo file_get_contents($files[0]). "<br />";
+            echo file_get_contents($files[1]). "<br />";
+            echo file_get_contents($files[2]). "<br />";
+            echo file_get_contents($files[3]). "<br />";
+      }
+      echo filee ($files);
     ?>
   </body>
 </html>

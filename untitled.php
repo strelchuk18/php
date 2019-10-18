@@ -236,3 +236,39 @@ else{
       }
       filee($f);
     ?>
+
+    передати масив в функцію, масив в ехо форіч і ехо файл гет контент 
+
+    <?php
+    $arr = array('text1.txt' => 'order.txt' => 'sample.txt' => 'demo.txt');
+      function filee($arr) {
+        print_r($arr)
+        $a = fopen ('text1.txt', 'r');
+        $b = fopen ('order.txt', 'r');
+        $c = fopen ('sample.txt', 'r');
+        $d = fopen ('demo.txt', 'r');
+          foreach ($arr as $value ) {
+          echo $arr;
+          }
+            
+          fclose($files);
+        }
+      filee(file_get_contents('text1.txt'));
+    ?>
+
+
+    <?php
+      function filee($f) {
+        $files = ['text1.txt', 'order.txt', 'sample.txt', 'demo.txt'];
+        $a = fopen ('text1.txt', 'r');
+        $b = fopen ('order.txt', 'r');
+        $c = fopen ('sample.txt', 'r');
+        $d = fopen ('demo.txt', 'r');
+          foreach ($files as $value ) {
+          
+          }
+            
+          fclose($files);
+        }
+      filee($f);
+    ?>
