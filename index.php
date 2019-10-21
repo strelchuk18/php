@@ -65,20 +65,18 @@
       filee($files);
       echo "<br />";
       
-      function team($A, $B) {
-         asort($A);
+      function team1($A, $B) {
+        asort($A);
           foreach($A as $k=>$v) {
-              echo "$k=>$v"."<br />";
-          }
-          echo "<br />";
-          asort($B);
-          foreach($B as $k=>$v) {
-            echo "$k=>$v" . "<br />";
+            
+            echo "$k ". "<br />";
           }
       }
-        $first_team = ['Dmytro111' => 5, 'Ivan' => 1,'Vova' => 6, 'Andriy' => 3,'Vasyl' => 2,'Petro' => 4,'Kindrat' => 7,'Oleksandr' => 1,'Oksana' => 3,'Olena' => 5,'Kyrylo' => 3];
+        $first_team = ['Dmytro' => 5, 'Ivan' => 1,'Vova' => 6, 'Andriy' => 3,'Vasyl' => 2,'Petro' => 4,'Kindrat' => 7,'Oleksandr' => 1,'Oksana' => 3,'Olena' => 5,'Kyrylo' => 3];
         $second_team = ['Stepan' => 5, 'Ivan' => 1,'Vova' => 6,'Serhii' => 3,'Vasyl' => 2,'Petro' => 4,'Oleksiy' => 7,'Iruna' => 1,'Oksana' => 3,'Olena' => 5,'Filip' => 3];
-      team($first_team, $second_team);
+        $result = array_merge($first_team, $second_team);
+      team1($result, $result);
+      echo "<br />";
     ?>
   </body>
 </html>
