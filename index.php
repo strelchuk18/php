@@ -65,15 +65,19 @@
       filee($files);
       echo "<br />";
       
-      function team1($first, $second) {
-        asort($first);
-          foreach($first as $key=>$value)
-           {
-            echo "$key=>$value". "<br />";
+      function team1($first_arr, $second_arr) {
+        $common[] = "";
+        asort($first_arr);
+        asort($second_arr);
+        foreach ($first_arr as $key => $value) {
+          foreach ($second_arr as $key_two => $value_two) {
+            if ($common) {
+              $common[] = [$key => $value, $key_two => $value_two];
+              print_r($common);         
+            }
           }
-          $eco = array ($first_team);
-          array_push($eco, $second_team);
-          echo($eco);
+        }
+        return asort();      
       }
         $first_team = [
           'Dmytro' => 5, 
@@ -102,9 +106,9 @@
           'Olena' => 5,
           'Filip' => 3
         ];
-        $first = array_replace($first_team, $second_team);
-      team1($first, $second);
-      echo "<br />";
+      team1($first_team, $second_team);
+      echo $common;
+      echo $second_team;
     ?>
   </body>
 </html>
