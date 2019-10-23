@@ -66,18 +66,15 @@
       echo "<br />";
       
       function team1($first_arr, $second_arr) {
-        $common[] = "";
-        asort($first_arr);
-        asort($second_arr);
+        $common = [];
         foreach ($first_arr as $key => $value) {
           foreach ($second_arr as $key_two => $value_two) {
-            if ($common) {
+            if (($key == $key_two) && ($value == $value_two)) {
               $common[] = [$key => $value, $key_two => $value_two];
-              print_r($common);         
             }
           }
         }
-        return asort();      
+        return asort($common); 
       }
         $first_team = [
           'Dmytro' => 5, 
@@ -106,9 +103,7 @@
           'Olena' => 5,
           'Filip' => 3
         ];
-      team1($first_team, $second_team);
-      echo $common;
-      echo $second_team;
+      echo team1($first_team, $second_team);
     ?>
   </body>
 </html>
