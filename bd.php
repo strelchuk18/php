@@ -6,8 +6,6 @@ if($connection == false)
 {
     exit();
 } else
-{
-}
 
 $db=mysqli_select_db($connection, "resouce");
 mysqli_set_charset("utf8_general_ci");
